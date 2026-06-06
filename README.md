@@ -1,10 +1,10 @@
 # Engineering Chatbot - Installation & Setup Guide
 
-## 📋 Overview
+## Overview
 
 This is a comprehensive AI-powered chatbot system for engineering students, supporting multiple departments and semesters. It provides intelligent search, document management, and easy access to study materials.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -42,7 +42,7 @@ streamlit run frontend/app.py
 
 The chatbot UI will open at: `http://localhost:8501`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 knowledge chatbot/
@@ -71,17 +71,17 @@ Edit `backend/config.py` to customize:
 - **Embedding Model**: all-MiniLM-L6-v2 (HuggingFace)
 - **Database Path**: data/chroma_db/
 
-## 👨‍💼 Admin Features
+## Admin Features
 
 Login to admin panel with password: **`admin123`**
 
 ### Admin Capabilities:
-- ✅ Upload new documents
-- ✅ Update document metadata
-- ✅ Delete documents
-- ✅ View all documents in system
+-  Upload new documents
+-  Update document metadata
+-  Delete documents
+-  View all documents in system
 
-## 🔍 Search Features
+##  Search Features
 
 ### 1. **Semantic Search**
    - Uses AI embeddings to find contextually relevant documents
@@ -110,24 +110,24 @@ Login to admin panel with password: **`admin123`**
 - PowerPoint (.pptx)
 - Text Files (.txt)
 
-## 🎯 Key Features
+## Key Features
 
 ### For Students
-✅ Fast semantic search across all materials  
-✅ Keyword-based filtering  
-✅ Browse materials by department/semester  
-✅ Download study materials directly  
-✅ Search results ranked by relevance  
-✅ Subject-wise material organization  
+ Fast semantic search across all materials  
+ Keyword-based filtering  
+ Browse materials by department/semester  
+ Download study materials directly  
+ Search results ranked by relevance  
+ Subject-wise material organization  
 
 ### For Admin
-✅ Upload new documents with metadata  
-✅ Automatic content extraction  
-✅ Metadata extraction from PDFs & docs  
-✅ Update or delete documents  
-✅ View document statistics  
+ Upload new documents with metadata  
+ Automatic content extraction  
+ Metadata extraction from PDFs & docs  
+ Update or delete documents  
+ View document statistics  
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Search
 ```
@@ -155,14 +155,14 @@ GET /config                        # Get system configuration
 GET /health                        # Health check
 ```
 
-## 📊 Performance Targets
+##  Performance Targets
 
 - Search results: < 2 seconds
 - Metadata extraction: < 10 seconds/file
 - System availability: 99% uptime
 - Support: 1000+ files, 5000+ queries/day
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Issue: Port already in use
 ```bash
@@ -187,7 +187,7 @@ python initialize.py
 - Use semantic search instead of keyword
 - Check if documents are uploaded via Admin panel
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 - [ ] User authentication system
 - [ ] Student behavior analytics
@@ -198,14 +198,14 @@ python initialize.py
 - [ ] Video content indexing
 - [ ] Plagiarism detection
 
-## 📝 License
+##  License
 
 Internal use only - Engineering Education Platform
 
-## 👨‍💻 Support
+##  Support
 
 For issues or features, contact: gopika.arasi@example.com
 
 ---
 
-**Happy Learning! 🎓**
+**Happy Learning! **
