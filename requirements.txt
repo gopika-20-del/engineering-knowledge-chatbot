@@ -1,0 +1,259 @@
+**Business Requirements Document (BRD)
+
+Engineering Chatbot System**
+
+1. Project Overview
+1.1 Purpose
+
+The Engineering Chatbot aims to provide an intelligent, unified digital assistant for engineering students across multiple departments (CSE, IT, AI&DS, CSBS, ECE, EEE, Mechanical, Civil, etc.).
+It should provide subject details, notes, previous year question papers, lab manuals, project ideas,assignment topics and allow keyword-based search and file downloads through an interactive UI.
+
+2. Objectives
+
+Provide a fast, accurate, conversational interface for accessing engineering study materials.
+
+Enable metadata-based search for documents (notes, PDFs, question papers).
+
+Support multiple departments and all 8 semesters.
+
+Provide a Streamlit web-based UI for easy interaction.
+
+Allow students to download stored materials directly.
+
+Improve academic accessibility and reduce time spent searching.
+
+3. Scope
+In-Scope
+
+Chatbot AI logic (Python + LLM).
+
+Multi-department, multi-semester content.
+
+Document storage and tagging.
+
+Metadata extraction and indexing.
+
+Keyword, semantic, and category-based search.
+
+Streamlit UI.
+
+File download option.
+
+Student-friendly structured responses (notes, syllabi, project ideas).
+
+Admin feature: upload and update materials.
+
+Out-of-Scope
+
+User login system (optional future add-on).
+
+Tracking student behavior analytics (future scope).
+
+Offline chatbot mode.
+
+4. Stakeholders
+Stakeholder	Role
+Gopika Arasi	Product Owner & Developer
+Students	End-users
+Faculty (Optional)	Content contributors
+IT/Admin	Document upload and maintenance
+5. Functional Requirements (FR)
+FR1 – Department Selection
+
+The chatbot must support the following departments at minimum:
+
+CSE
+
+IT
+
+AI & DS
+
+CSBS
+
+ECE
+
+EEE
+
+Mechanical
+
+Civil
+
+FR2 – Semester Navigation
+
+The system must provide content for all semesters (1–8).
+
+Users can select or type semester information.
+
+FR3 – Subject-Level Response
+
+For each subject, chatbot must provide:
+
+Syllabus
+
+Notes (PDF/doc)
+
+Lab manuals
+
+Video references (YouTube links)
+
+Previous year question papers
+
+Short notes summary
+
+FR4 – Keyword-Based Search
+
+Users can search using keywords like:
+
+“DBMS unit 2 notes”
+
+“AI&DS 3rd sem project ideas”
+
+“Python lab manual download”
+
+The system must return the most relevant materials.
+
+FR5 – Semantic Search (Embedding-Based)
+
+The system must use vector embeddings to match context-based queries.
+
+Example: “Explain TCP layers” → networking notes PDF.
+
+FR6 – Metadata Extraction
+
+The system must automatically extract the following metadata when uploading files:
+
+Title
+
+Subject
+
+Department
+
+Semester
+
+Keywords
+
+File type
+
+Short summary
+
+FR7 – Document Upload (Admin Only)
+
+Admin can upload files.
+
+System must process and store metadata.
+
+Admin can update or delete files.
+
+FR8 – File Download
+
+Students must be able to download PDF or document files directly from the chatbot or UI.
+
+FR9 – Conversational QA
+
+Chatbot must support answering conceptual questions using stored content or LLM knowledge.
+
+FR10 – Streamlit Web UI
+
+UI must include:
+
+Sidebar: dept + semester dropdown
+
+Search bar
+
+Chat window
+
+File preview and download button
+
+Dark/light theme (optional)
+
+FR11 – Error Handling
+
+System must show:
+
+“No results found”
+
+“File not available”
+
+“Invalid department/semester entered”
+
+6. Non-Functional Requirements (NFR)
+NFR1 – Performance
+
+Search results under 2 seconds.
+
+Metadata extraction under 10 seconds per file.
+
+NFR2 – Availability
+
+System uptime: 99%.
+
+NFR3 – Usability
+
+Minimal technical steps for users.
+
+UI must be mobile-friendly.
+
+NFR4 – Scalability
+
+Must support:
+
+1000+ files
+
+5000+ queries/day
+
+NFR5 – Security
+
+File downloads must be secured.
+
+Admin actions restricted.
+
+NFR6 – Maintainability
+
+New departments and subjects should be easy to add.
+
+7. System Architecture Requirements
+7.1 Backend
+
+Python (FastAPI/Flask)
+
+Vector Database (ChromaDB/FAISS)
+
+Document storage (Local/AWS S3)
+
+7.2 Frontend
+
+Streamlit UI
+
+7.3 NLP Layer
+
+Embeddings generator (OpenAI / HuggingFace)
+
+LLM for answering questions
+
+7.4 Database Storage
+
+File metadata table
+
+Department/semester/subject mapping
+
+Search index
+
+8. Success Metrics
+Metric	Goal
+Search accuracy	90% relevant results
+Student satisfaction	4.5+/5
+Reduction in material search time	70%
+Daily active users	100+
+9. Risks & Mitigations
+Risk	Mitigation
+Incomplete metadata	Auto-extraction + admin edit
+Large file upload failures	Limit max file size 50MB
+Users submitting vague queries	Add guided suggestions
+10. Timeline (Sample)
+Phase	Duration
+Requirement Gathering	1 week
+Architecture Design	1 week
+Backend Development	2–3 weeks
+UI Development	1 week
+Testing	1 week
+Launch	After 6–7 weeks

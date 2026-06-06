@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+.env
+
+# Python compilation cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# IDE / Editor configuration
+.vscode/
+.idea/
+
+# Local Database and User Uploads
+data/chroma_db/
+data/storage/*
+!data/storage/PROJECT_TOPICS.json  # Keep the database template
+
+# Temporary files
+temp_*
+*.log
